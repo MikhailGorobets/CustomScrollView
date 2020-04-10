@@ -13,13 +13,11 @@ class TransparentScrollView: NSScrollView {
     }
 }
 
-
 struct CustomScrollView<Content: View>: NSViewRepresentable  {
     private var content: Content
     public init(@ViewBuilder content: () -> Content) {
         self.content = content()
     }
-
     
     public func makeNSView(context: Context) -> NSScrollView {
             
@@ -45,8 +43,6 @@ struct CustomScrollView<Content: View>: NSViewRepresentable  {
             document.widthAnchor.constraint(equalTo: scrollView.contentView.widthAnchor)
         
         ])
-   
-     
         return scrollView
     }
     
