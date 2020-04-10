@@ -34,10 +34,7 @@ struct CustomScrollView<Content: View>: NSViewRepresentable  {
         document.translatesAutoresizingMaskIntoConstraints = false
         
         scrollView.documentView = document
-        
-        
-    
-        
+
         NSLayoutConstraint.activate([
             document.topAnchor.constraint(equalTo: scrollView.contentView.topAnchor),
             document.widthAnchor.constraint(equalTo: scrollView.contentView.widthAnchor)
@@ -52,8 +49,6 @@ struct CustomScrollView<Content: View>: NSViewRepresentable  {
         }
         document.rootView = AnyView(content)
     }
-    
-
 }
 
 
